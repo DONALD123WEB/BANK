@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YourBank - Empowering Your Financial Journey</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Lexend', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#1a1a1a] text-white min-h-screen flex flex-col justify-between overflow-x-hidden relative selection:bg-[#caff33] selection:text-black">
+
+  <!-- Background Grid Glow Effect -->
+  <div class="absolute top-0 left-0 w-96 h-96 bg-[#caff33]/5 rounded-full blur-3xl pointer-events-none"></div>
+
+  <!-- Header / Navigation -->
+  <header class="max-w-7xl w-full mx-auto px-6 pt-6 flex items-center justify-between z-20">
+    <!-- Brand Logo -->
+    <div class="flex items-center gap-2">
+      <div class="w-7 h-7 bg-[#caff33] rounded-sm flex items-center justify-center p-1">
+        <svg class="w-full h-full text-black" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <span class="text-xl font-semibold tracking-tight text-white">YourBank</span>
+    </div>
+
+    <!-- Navigation Bar Pill -->
+    <nav class="hidden md:flex items-center gap-1 bg-[#262626] px-2 py-1.5 rounded-full border border-zinc-800 text-sm">
+      <a href="#" class="px-5 py-2 rounded-full bg-[#1a1a1a] text-white font-medium">Home</a>
+      <a href="#" class="px-5 py-2 text-zinc-400 hover:text-white transition font-medium">Careers</a>
+      <a href="#" class="px-5 py-2 text-zinc-400 hover:text-white transition font-medium">About</a>
+      <a href="#" class="px-5 py-2 text-zinc-400 hover:text-white transition font-medium">Security</a>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="flex items-center gap-6 text-sm font-medium">
+      <a href="#" class="text-zinc-300 hover:text-white transition">Sign Up</a>
+      <a href="#" class="bg-[#caff33] text-black px-6 py-2.5 rounded-full hover:bg-[#b5e62d] transition font-semibold">Login</a>
+    </div>
+  </header>
+
+  <!-- Main Hero Section -->
+  <main class="max-w-7xl w-full mx-auto px-6 py-12 lg:py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+    
+    <!-- Left Hero Column -->
+    <div class="lg:col-span-6 space-y-6">
+      
+      <!-- Feature Tag -->
+      <div class="inline-flex items-center gap-2 bg-[#222222] border border-zinc-800/80 px-4 py-2 rounded-full text-xs text-zinc-300">
+        <span class="w-4 h-4 rounded-full bg-[#caff33] text-black flex items-center justify-center text-[10px] font-bold">✓</span>
+        <span>No LLC Required, No Credit Check.</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.15]">
+        Welcome to YourBank<br />
+        Empowering Your <span class="text-[#caff33]">Financial<br />Journey</span>
+      </h1>
+
+      <!-- Subtitle Body Text -->
+      <p class="text-zinc-400 text-sm sm:text-base max-w-xl leading-relaxed font-light">
+        At YourBank, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs.
+      </p>
+
+      <!-- Primary CTA Button -->
+      <div class="pt-2">
+        <a href="#" class="inline-block bg-[#caff33] text-black font-semibold px-7 py-3.5 rounded-full hover:bg-[#b5e62d] transition text-sm">
+          Open Account
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Hero Graphic / Financial Mockup -->
+    <div class="lg:col-span-6 relative flex justify-center lg:justify-end">
+      
+      <!-- Background Green Vectors (Upward Diagonal Arrows on the Right) -->
+      <div class="absolute -right-6 top-8 pointer-events-none opacity-80">
+        <svg width="240" height="240" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M40 160L160 40M160 40H80M160 40V120" stroke="#caff33" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+          <path d="M10 130L110 30M110 30H50M110 30V90" stroke="#caff33" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.25"/>
+          <path d="M70 180L170 80M170 80H120M170 80V130" stroke="#caff33" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
+        </svg>
+      </div>
+
+      <!-- Top Floating Card: Monthly Income -->
+      <div class="absolute -top-6 left-2 sm:left-10 z-20 bg-[#222222] border border-zinc-800/80 rounded-2xl px-4 py-3 flex items-center gap-3 shadow-xl">
+        <div class="w-8 h-8 rounded-full bg-[#caff33] flex items-center justify-center text-black font-bold text-base">
+          +
+        </div>
+        <div>
+          <div class="text-xs font-semibold text-white">+ $5000,00</div>
+          <div class="text-[11px] text-zinc-400">Monthly Income</div>
+        </div>
+      </div>
+
+      <!-- Main Financial Card Container -->
+      <div class="w-full max-w-md bg-[#1f1f1f]/90 border border-zinc-800 rounded-3xl p-6 space-y-6 backdrop-blur-md shadow-2xl relative z-10">
+        
+        <!-- Transactions Section -->
+        <div class="space-y-3 relative">
+          <h3 class="text-xs font-medium text-zinc-300">Your Transactions</h3>
+          
+          <div class="space-y-2 relative">
+            
+            <!-- SVG Arrows Pointing Directly to Each Transaction Line -->
+            <svg class="absolute -left-12 top-0 w-12 h-full overflow-visible pointer-events-none" viewBox="0 0 48 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Top Arrow (Joel Kenley) -->
+              <path d="M2 15 C 20 15, 25 22, 38 22" stroke="#caff33" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.9" />
+              <polygon points="44,22 36,18 36,26" fill="#caff33" opacity="0.9" />
+
+              <!-- Middle Arrow (Mark Smith) -->
+              <path d="M2 75 C 20 75, 25 78, 38 78" stroke="#caff33" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.7" />
+              <polygon points="44,78 36,74 36,82" fill="#caff33" opacity="0.7" />
+
+              <!-- Bottom Arrow (Lenen Roy) -->
+              <path d="M2 132 C 20 132, 25 132, 38 132" stroke="#caff33" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5" />
+              <polygon points="44,132 36,128 36,136" fill="#caff33" opacity="0.5" />
+            </svg>
+
+            <!-- Item 1: Joel Kenley -->
+            <div class="bg-[#262626] border border-zinc-800 rounded-xl p-3 flex items-center justify-between relative">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full bg-[#caff33] flex items-center justify-center text-black">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-[10px] text-zinc-400">Transaction</div>
+                  <div class="text-xs font-semibold text-white">Joel Kenley</div>
+                </div>
+              </div>
+              <span class="text-xs font-semibold text-white">-$68.00</span>
+            </div>
+
+            <!-- Item 2: Mark Smith -->
+            <div class="bg-[#262626]/70 border border-zinc-800/60 rounded-xl p-3 flex items-center justify-between opacity-80 relative">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full bg-[#caff33]/80 flex items-center justify-center text-black">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-[10px] text-zinc-400">Transaction</div>
+                  <div class="text-xs font-medium text-zinc-300">Mark Smith</div>
+                </div>
+              </div>
+              <span class="text-xs font-medium text-zinc-300">-$68.00</span>
+            </div>
+
+            <!-- Item 3: Lenen Roy -->
+            <div class="bg-[#262626]/40 border border-zinc-800/40 rounded-xl p-3 flex items-center justify-between opacity-50 relative">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full bg-[#caff33]/60 flex items-center justify-center text-black">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-[10px] text-zinc-400">Transaction</div>
+                  <div class="text-xs font-medium text-zinc-400">Lenen Roy</div>
+                </div>
+              </div>
+              <span class="text-xs font-medium text-zinc-400">-$68.00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Money Exchange Section -->
+        <div class="space-y-3">
+          <h3 class="text-xs font-medium text-zinc-300">Money Exchange</h3>
+          
+          <div class="bg-[#222222] border border-zinc-800/80 rounded-2xl p-3.5 space-y-3">
+            <!-- Exchange Inputs -->
+            <div class="grid grid-cols-2 gap-2">
+              <!-- From Currency -->
+              <div class="bg-[#1a1a1a] border border-zinc-800 rounded-xl p-3">
+                <div class="flex items-center gap-2 mb-1">
+                  <!-- India Flag SVG -->
+                  <svg class="w-5 h-3.5 rounded-sm overflow-hidden" viewBox="0 0 640 480">
+                    <path fill="#f93" d="M0 0h640v160H0z"/>
+                    <path fill="#fff" d="M0 160h640v160H0z"/>
+                    <path fill="#128807" d="M0 320h640v160H0z"/>
+                    <circle cx="320" cy="240" r="60" fill="none" stroke="#000080" stroke-width="12"/>
+                  </svg>
+                  <span class="text-xs font-bold text-white">INR</span>
+                </div>
+                <div class="text-[10px] text-zinc-400 mb-2">Indian Rupees</div>
+                <div class="text-sm font-medium text-white">5,0000</div>
+              </div>
+
+              <!-- To Currency -->
+              <div class="bg-[#1a1a1a] border border-zinc-800 rounded-xl p-3">
+                <div class="flex items-center gap-2 mb-1">
+                  <!-- USA Flag SVG -->
+                  <svg class="w-5 h-3.5 rounded-sm overflow-hidden" viewBox="0 0 640 480">
+                    <rect width="640" height="480" fill="#bd3d44"/>
+                    <path stroke="#fff" stroke-width="37" d="M0 55.5h640M0 129h640M0 203h640M0 277h640M0 351h640M0 424.5h640"/>
+                    <rect width="256" height="258.5" fill="#192f5d"/>
+                  </svg>
+                  <span class="text-xs font-bold text-white">USD</span>
+                </div>
+                <div class="text-[10px] text-zinc-400 mb-2">United States Dollar</div>
+                <div class="text-sm font-medium text-white">12.00</div>
+              </div>
+            </div>
+
+            <!-- Exchange Action Button -->
+            <button class="w-full bg-[#293219] border border-[#caff33]/20 text-[#caff33] font-medium py-2.5 rounded-xl text-xs hover:bg-[#323d1e] transition">
+              Exchange
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Bottom Bar: Supported Currency Badge -->
+  <footer class="max-w-7xl w-full mx-auto px-6 pb-6 flex justify-end z-20">
+    <div class="inline-flex items-center gap-3 bg-[#222222] border border-zinc-800/80 px-4 py-2 rounded-full text-xs text-zinc-300">
+      <span class="text-zinc-400">Supported Currency</span>
+      <div class="flex items-center gap-1.5">
+        <span class="w-6 h-6 rounded-full bg-[#1a1a1a] text-[#caff33] border border-zinc-800 flex items-center justify-center font-semibold text-xs">$</span>
+        <span class="w-6 h-6 rounded-full bg-[#1a1a1a] text-[#caff33] border border-zinc-800 flex items-center justify-center font-semibold text-xs">€</span>
+        <span class="w-6 h-6 rounded-full bg-[#1a1a1a] text-[#caff33] border border-zinc-800 flex items-center justify-center font-semibold text-xs">₿</span>
+        <span class="w-6 h-6 rounded-full bg-[#1a1a1a] text-[#caff33] border border-zinc-800 flex items-center justify-center font-semibold text-xs">Ξ</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
