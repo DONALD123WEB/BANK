@@ -9,6 +9,10 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     <!-- Tailwind Custom Configuration -->
     <script>
         tailwind.config = {
@@ -65,10 +69,7 @@
 
             <!-- Background Image -->
             <img
-                src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=80"
-                alt="Security"
-                class="absolute inset-0 w-full h-full object-cover opacity-50"
-            >
+                src="image/Container.png"alt="Security"3>
 
             <!-- Dark Overlay -->
             <div class="absolute inset-0 bg-black/60"></div>
@@ -126,7 +127,7 @@
             <div class="bg-[#181818] border border-gray-800 rounded-xl p-7 hover:border-[#b6ff00] transition">
 
                 <div class="w-10 h-10 rounded-lg bg-[#b6ff00]/10 flex items-center justify-center mb-5">
-                    <span class="text-[#b6ff00] text-lg">✓</span>
+                    <i class="fas fa-solid fa-circle-check text-[#b6ff00]text-lg"></i>
                 </div>
 
                 <h3 class="font-semibold text-base mb-3">
@@ -265,7 +266,7 @@
 
 
             <!-- FAQ 4 -->
- g            <div class="border-b border-gray-800 pb-6">
+             <div class="border-b border-gray-800 pb-6">
 
                 <h3 class="text-sm font-semibold mb-3">
                     Are my transactions and personal information secure?
@@ -296,100 +297,212 @@
 
 
     <!-- ================= FOOTER ================= -->
-    <footer class="border-t border-gray-800 mt-10">
+    <footer class="max-w-[1600px] mx-auto px-8 md:px-16 pt-14 pb-12">
 
-        <div class="max-w-6xl mx-auto px-6 py-10">
+        <!-- Logo -->
+        <div class="flex justify-center">
+            <a href="#" class="flex items-center gap-2">
 
-            <!-- Footer Top -->
-            <div class="flex flex-col md:flex-row justify-between gap-8">
+                <!-- Logo Icon -->
+                <div class="w-9 h-9 relative flex items-center justify-center">
 
-                <!-- Logo -->
-                <div>
-                    <div class="flex items-center gap-2">
+                    <div class="absolute left-0 top-0 w-4 h-4 bg-[#b6ff00]"></div>
+                    <div class="absolute right-0 top-0 w-4 h-4 bg-[#b6ff00]"></div>
+                    <div class="absolute left-0 bottom-0 w-4 h-4 bg-[#b6ff00]"></div>
+                    <div class="absolute right-0 bottom-0 w-4 h-4 bg-[#b6ff00]"></div>
 
-                        <div class="w-5 h-5 rounded-full bg-[#b6ff00] flex items-center justify-center">
-                            <span class="text-black text-[10px] font-bold">
-                                ✓
-                            </span>
-                        </div>
-
-                        <span class="font-bold text-sm">
-                            Your<span class="text-[#b6ff00]">Bank</span>
-                        </span>
-
-                    </div>
-
-                    <p class="text-gray-600 text-xs mt-3 max-w-xs">
-                        Secure banking made simple, safe and accessible.
-                    </p>
-                </div>
-
-
-                <!-- Footer Links -->
-                <div class="flex gap-10 text-xs">
-
-                    <div>
-                        <h4 class="font-semibold mb-4">
-                            Company
-                        </h4>
-
-                        <div class="space-y-3 text-gray-500">
-                            <a href="#" class="block hover:text-white">
-                                Home
-                            </a>
-
-                            <a href="#" class="block hover:text-white">
-                                About
-                            </a>
-
-                            <a href="#" class="block hover:text-white">
-                                Contact
-                            </a>
-                        </div>
-                    </div>
-
-
-                    <div>
-                        <h4 class="font-semibold mb-4">
-                            Support
-                        </h4>
-
-                        <div class="space-y-3 text-gray-500">
-                            <a href="#" class="block hover:text-white">
-                                Security
-                            </a>
-
-                            <a href="#" class="block hover:text-white">
-                                Help Center
-                            </a>
-
-                            <a href="#" class="block hover:text-white">
-                                Privacy
-                            </a>
-                        </div>
-                    </div>
+                    <div class="absolute w-4 h-4 bg-[#191919] rotate-45"></div>
 
                 </div>
+
+                <span class="text-2xl font-medium tracking-tight">
+                    YourBanK
+                </span>
+
+            </a>
+        </div>
+
+
+        <!-- Navigation -->
+        <nav class="flex justify-center gap-7 mt-14 text-[18px] text-gray-200">
+
+            <a href="#" class="hover:text-[#b6ff00] transition">
+                Home
+            </a>
+
+            <a href="#" class="hover:text-[#b6ff00] transition">
+                Careers
+            </a>
+
+            <a href="#" class="hover:text-[#b6ff00] transition">
+                About
+            </a>
+
+            <a href="#" class="hover:text-[#b6ff00] transition">
+                Security
+            </a>
+
+        </nav>
+
+
+        <!-- Horizontal Line -->
+        <div class="border-t border-[#292929] mt-12"></div>
+
+
+        <!-- Contact Information -->
+        <div class="flex flex-wrap justify-center items-center gap-7 md:gap-8 py-7 text-gray-300">
+
+            <!-- Email -->
+            <a
+                href="mailto:hello@skillbridge.com"
+                class="flex items-center gap-2 hover:text-white transition"
+            >
+                <i class="fa-solid fa-envelope text-[#b6ff00] text-xl"></i>
+
+                <span>
+                    hello@skillbridge.com
+                </span>
+            </a>
+
+
+            <!-- Phone -->
+            <a
+                href="tel:+9191813232309"
+                class="flex items-center gap-2 hover:text-white transition"
+            >
+                <i class="fa-solid fa-phone text-[#b6ff00] text-xl"></i>
+
+                <span>
+                    +91 91813 23 2309
+                </span>
+            </a>
+
+
+            <!-- Location -->
+            <div class="flex items-center gap-2">
+
+                <i class="fa-solid fa-location-dot text-[#b6ff00] text-xl"></i>
+
+                <span>
+                    Somewhere in the World
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Horizontal Line -->
+        <div class="border-t border-[#292929]"></div>
+
+
+        <!-- Bottom Footer -->
+        <div
+            class="
+                mt-12
+                border border-[#292929]
+                rounded-[45px]
+                px-4 md:px-6
+                py-4
+                flex
+                flex-col
+                lg:flex-row
+                items-center
+                justify-between
+                gap-6
+            "
+        >
+
+            <!-- Social Media -->
+            <div class="flex items-center gap-3">
+
+                <!-- Facebook -->
+                <a
+                    href="#"
+                    class="
+                        w-[52px] h-[52px]
+                        rounded-full
+                        bg-[#b6ff00]
+                        text-[#191919]
+                        flex items-center justify-center
+                        text-2xl
+                        hover:scale-105
+                        transition
+                    "
+                >
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+
+                <!-- Twitter -->
+                <a
+                    href="#"
+                    class="
+                        w-[52px] h-[52px]
+                        rounded-full
+                        bg-[#b6ff00]
+                        text-[#191919]
+                        flex items-center justify-center
+                        text-2xl
+                        hover:scale-105
+                        transition
+                    "
+                >
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+
+
+                <!-- LinkedIn -->
+                <a
+                    href="#"
+                    class="
+                        w-[52px] h-[52px]
+                        rounded-full
+                        bg-[#b6ff00]
+                        text-[#191919]
+                        flex items-center justify-center
+                        text-xl
+                        hover:scale-105
+                        transition
+                    "
+                >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
 
             </div>
 
 
-            <!-- Footer Bottom -->
-            <div class="border-t border-gray-800 mt-8 pt-6 flex flex-col md:flex-row justify-between gap-4">
+            <!-- Copyright -->
+            <p class="text-gray-400 text-[17px]">
+                YourBank All Rights Reserved
+            </p>
 
-                <p class="text-gray-600 text-[10px]">
-                    © 2026 YourBank. All rights reserved.
-                </p>
 
-                <p class="text-gray-600 text-[10px]">
-                    Your security is our priority.
-                </p>
+            <!-- Policies -->
+            <div class="flex items-center gap-3 text-gray-400 text-[17px]">
+
+                <a
+                    href="#"
+                    class="hover:text-white transition"
+                >
+                    Privacy Policy
+                </a>
+
+                <span class="h-7 w-px bg-gray-500"></span>
+
+                <a
+                    href="#"
+                    class="hover:text-white transition"
+                >
+                    Terms of Service
+                </a>
 
             </div>
 
         </div>
 
     </footer>
+
 
 </body>
 </html>
