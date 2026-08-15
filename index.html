@@ -1,176 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YourBank - Empowering Your Financial Journey</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Lexend', sans-serif;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Security Page</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        limegreen: "#b6ff00",
+                        darkbg: "#111111",
+                        cardbg: "#181818"
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-[#1a1a1a] text-white min-h-screen flex flex-col justify-between overflow-x-hidden relative selection:bg-[#caff33] selection:text-black">
 
-  <!-- Background Grid Glow Effect -->
-  <div class="absolute top-0 left-0 w-96 h-96 bg-[#caff33]/5 rounded-full blur-3xl pointer-events-none"></div>
+<body class="bg-[#111111] text-white font-sans">
 
-  <!-- Header / Navigation -->
-  <header class="max-w-7xl w-full mx-auto px-6 pt-6 flex items-center justify-between z-20">
-    <!-- Brand Logo -->
-    <div class="flex items-center gap-2">
-      <div class="w-7 h-7 bg-[#caff33] rounded-sm flex items-center justify-center p-1">
-        <svg class="w-full h-full text-black" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-      <span class="text-xl font-semibold tracking-tight text-white">YourBank</span>
-    </div>
+    <!-- ================= NAVBAR ================= -->
+    <header class="w-full bg-[#111111]">
+        <nav class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
 
-    <!-- Navigation Bar Pill -->
-    <nav class="hidden md:flex items-center gap-1 bg-[#262626] px-2 py-1.5 rounded-full border border-zinc-800 text-sm">
-      <a href="#" class="px-5 py-2 rounded-full bg-[#1a1a1a] text-white font-medium">Home</a>
-      <a href="#" class="px-5 py-2 text-zinc-400 hover:text-white transition font-medium">Careers</a>
-      <a href="#" class="px-5 py-2 text-zinc-400 hover:text-white transition font-medium">About</a>
-      <a href="#" class="px-5 py-2 text-zinc-400 hover:text-white transition font-medium">Security</a>
-    </nav>
-
-    <!-- Header Actions -->
-    <div class="flex items-center gap-6 text-sm font-medium">
-      <a href="#" class="text-zinc-300 hover:text-white transition">Sign Up</a>
-      <a href="#" class="bg-[#caff33] text-black px-6 py-2.5 rounded-full hover:bg-[#b5e62d] transition font-semibold">Login</a>
-    </div>
-  </header>
-
-  <!-- Main Hero Section -->
-  <main class="max-w-7xl w-full mx-auto px-6 py-12 lg:py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-    
-    <!-- Left Hero Column -->
-    <div class="lg:col-span-6 space-y-6">
-      
-      <!-- Feature Tag -->
-      <div class="inline-flex items-center gap-2 bg-[#222222] border border-zinc-800/80 px-4 py-2 rounded-full text-xs text-zinc-300">
-        <span class="w-4 h-4 rounded-full bg-[#caff33] text-black flex items-center justify-center text-[10px] font-bold">✓</span>
-        <span>No LLC Required, No Credit Check.</span>
-      </div>
-
-      <!-- Main Headline -->
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.15]">
-        Welcome to YourBank<br />
-        Empowering Your <span class="text-[#caff33]">Financial<br />Journey</span>
-      </h1>
-
-      <!-- Subtitle Body Text -->
-      <p class="text-zinc-400 text-sm sm:text-base max-w-xl leading-relaxed font-light">
-        At YourBank, our mission is to provide comprehensive banking solutions that empower individuals and businesses to achieve their financial goals. We are committed to delivering personalized and innovative services that prioritize our customers' needs.
-      </p>
-
-      <!-- Primary CTA Button -->
-      <div class="pt-2">
-        <a href="#" class="inline-block bg-[#caff33] text-black font-semibold px-7 py-3.5 rounded-full hover:bg-[#b5e62d] transition text-sm">
-          Open Account
-        </a>
-      </div>
-    </div>
-
-    <!-- Right Hero Graphic / Financial Mockup -->
-    <div class="lg:col-span-6 relative flex justify-center lg:justify-end">
-      
-      <!-- Background Green Vectors (Upward Diagonal Arrows on the Right) -->
-      <div class="absolute -right-6 top-8 pointer-events-none opacity-80">
-        <svg width="240" height="240" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M40 160L160 40M160 40H80M160 40V120" stroke="#caff33" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
-          <path d="M10 130L110 30M110 30H50M110 30V90" stroke="#caff33" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.25"/>
-          <path d="M70 180L170 80M170 80H120M170 80V130" stroke="#caff33" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"/>
-        </svg>
-      </div>
-
-      <!-- Top Floating Card: Monthly Income -->
-      <div class="absolute -top-6 left-2 sm:left-10 z-20 bg-[#222222] border border-zinc-800/80 rounded-2xl px-4 py-3 flex items-center gap-3 shadow-xl">
-        <div class="w-8 h-8 rounded-full bg-[#caff33] flex items-center justify-center text-black font-bold text-base">
-          +
-        </div>
-        <div>
-          <div class="text-xs font-semibold text-white">+ $5000,00</div>
-          <div class="text-[11px] text-zinc-400">Monthly Income</div>
-        </div>
-      </div>
-
-      <!-- Main Financial Card Container -->
-      <div class="w-full max-w-md bg-[#1f1f1f]/90 border border-zinc-800 rounded-3xl p-6 space-y-6 backdrop-blur-md shadow-2xl relative z-10">
-        
-        <!-- Transactions Section -->
-        <div class="space-y-3 relative">
-          <h3 class="text-xs font-medium text-zinc-300">Your Transactions</h3>
-          
-          <div class="space-y-2 relative">
-            
-            <!-- SVG Arrows Pointing Directly to Each Transaction Line -->
-            <svg class="absolute -left-12 top-0 w-12 h-full overflow-visible pointer-events-none" viewBox="0 0 48 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Top Arrow (Joel Kenley) -->
-              <path d="M2 15 C 20 15, 25 22, 38 22" stroke="#caff33" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.9" />
-              <polygon points="44,22 36,18 36,26" fill="#caff33" opacity="0.9" />
-
-              <!-- Middle Arrow (Mark Smith) -->
-              <path d="M2 75 C 20 75, 25 78, 38 78" stroke="#caff33" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.7" />
-              <polygon points="44,78 36,74 36,82" fill="#caff33" opacity="0.7" />
-
-              <!-- Bottom Arrow (Lenen Roy) -->
-              <path d="M2 132 C 20 132, 25 132, 38 132" stroke="#caff33" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5" />
-              <polygon points="44,132 36,128 36,136" fill="#caff33" opacity="0.5" />
-            </svg>
-
-            <!-- Item 1: Joel Kenley -->
-            <div class="bg-[#262626] border border-zinc-800 rounded-xl p-3 flex items-center justify-between relative">
-              <div class="flex items-center gap-3">
-                <div class="w-8 h-8 rounded-full bg-[#caff33] flex items-center justify-center text-black">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
-                  </svg>
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <div class="w-5 h-5 rounded-full bg-[#b6ff00] flex items-center justify-center">
+                    <span class="text-black text-[10px] font-bold">✓</span>
                 </div>
-                <div>
-                  <div class="text-[10px] text-zinc-400">Transaction</div>
-                  <div class="text-xs font-semibold text-white">Joel Kenley</div>
-                </div>
-              </div>
-              <span class="text-xs font-semibold text-white">-$68.00</span>
+
+                <span class="font-bold text-sm">
+                    Your<span class="text-[#b6ff00]">Bank</span>
+                </span>
             </div>
 
-            <!-- Item 2: Mark Smith -->
-            <div class="bg-[#262626]/70 border border-zinc-800/60 rounded-xl p-3 flex items-center justify-between opacity-80 relative">
-              <div class="flex items-center gap-3">
-                <div class="w-8 h-8 rounded-full bg-[#caff33]/80 flex items-center justify-center text-black">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
-                  </svg>
-                </div>
-                <div>
-                  <div class="text-[10px] text-zinc-400">Transaction</div>
-                  <div class="text-xs font-medium text-zinc-300">Mark Smith</div>
-                </div>
-              </div>
-              <span class="text-xs font-medium text-zinc-300">-$68.00</span>
+            <!-- Navigation Links -->
+            <div class="hidden md:flex items-center gap-8 text-xs text-gray-400">
+                <a href="#" class="hover:text-white transition">Home</a>
+                <a href="#" class="hover:text-white transition">Contact</a>
+                <a href="#" class="hover:text-white transition">About</a>
+                <a href="#" class="text-white">Security</a>
             </div>
 
-            <!-- Item 3: Lenen Roy -->
-            <div class="bg-[#262626]/40 border border-zinc-800/40 rounded-xl p-3 flex items-center justify-between opacity-50 relative">
-              <div class="flex items-center gap-3">
-                <div class="w-8 h-8 rounded-full bg-[#caff33]/60 flex items-center justify-center text-black">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
-                  </svg>
-                </div>
-                <div>
-                  <div class="text-[10px] text-zinc-400">Transaction</div>
-                  <div class="text-xs font-medium text-zinc-400">Lenen Roy</div>
-                </div>
-              </div>
-              <span class="text-xs font-medium text-zinc-400">-$68.00</span>
+            <!-- Login Button -->
+            <button class="bg-[#b6ff00] text-black px-5 py-2 rounded-full text-xs font-semibold hover:bg-lime-300 transition">
+                Login
+            </button>
+        </nav>
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="max-w-6xl mx-auto px-6 py-10">
+
+        <div class="relative min-h-[330px] rounded-xl overflow-hidden">
+
+            <!-- Background Image -->
+            <img
+                src="image/Container.png"alt="Security"3>
+
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-black/60"></div>
+
+            <!-- Hero Content -->
+            <div class="relative z-10 max-w-xl p-8 md:p-12 pt-16">
+
+                <p class="text-xs text-gray-400 mb-3">
+                    BANK SECURITY
+                </p>
+
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+                    Your Security is Our
+                    <span class="text-[#b6ff00]">
+                        Top Priority
+                    </span>
+                </h1>
+
+                <p class="text-gray-400 text-sm leading-6 mt-5 max-w-lg">
+                    Your safety comes first. We use advanced security technology
+                    and strong protection measures to keep your personal
+                    information and money safe.
+                </p>
+
+                <button class="mt-6 bg-[#b6ff00] text-black px-6 py-3 rounded-full text-xs font-bold hover:bg-lime-300 transition">
+                    Learn More
+                </button>
+
             </div>
-          </div>
         </div>
+
+    </section>
+
+
+    <!-- ================= PROTECTION SECTION ================= -->
+    <section class="max-w-6xl mx-auto px-6 py-12">
+
+        <!-- Section Heading -->
+        <div class="mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold">
+                How We
+                <span class="text-[#b6ff00]">Protect You</span>
+            </h2>
+
+            <p class="text-gray-500 text-xs mt-2 max-w-xl">
+                At Your Bank, we prioritize the security and confidentiality of your financial information. Our state-of-the-art encryption technology and stringent data protection measures ensure your assets and transactions are safeguarded at all times.
+            </p>
+        </div>
+
+
+        <!-- Protection Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+            <!-- Card 1 -->
+            <div class="bg-[#181818] border border-gray-800 rounded-xl p-7 hover:border-[#b6ff00] transition">
+
+                <div class="w-10 h-10 rounded-lg bg-[#b6ff00]/10 flex items-center justify-center mb-5">
+                    <i class="fas fa-solid fa-circle-check text-[#b6ff00]text-lg"></i>
+                </div>
+
+                <h3 class="font-semibold text-base mb-3">
+                    Secure Online Banking Platform
+                </h3>
+
+                <p class="text-gray-500 text-xs leading-6">
+                    Our online banking platform is built with multiple layers of security to safeguard your information.we utilize industry-standard encrypton protocols to ensure that your data remains confidential and protected during transmission.
+                </p>
+
+            </div>
+
+
+            <!-- Card 2 -->
+            <div class="bg-[#181818] border border-gray-800 rounded-xl p-7 hover:border-[#b6ff00] transition">
+
+                <div class="w-10 h-10 rounded-lg bg-[#b6ff00]/10 flex items-center justify-center mb-5">
+                    <span class="text-[#b6ff00] text-lg">●</span>
+                </div>
+
+                <h3 class="font-semibold text-base mb-3">
+                    Multi-Factor Authentication
+                </h3>
+
+                <p class="text-gray-500 text-xs leading-6">
+                  To enhance the security of your online banking experience, we employ multi-factor authentication. this additional layer of security requires you to provide multiple pieces of identification, such as a password and a one-time verification code, to access your account.
+                </p>
+
+            </div>
+
+
+            <!-- Card 3 -->
+            <div class="bg-[#181818] border border-gray-800 rounded-xl p-7 hover:border-[#b6ff00] transition">
+
+                <div class="w-10 h-10 rounded-lg bg-[#b6ff00]/10 flex items-center justify-center mb-5">
+                    <span class="text-[#b6ff00] text-lg">◆</span>
+                </div>
+
+                <h3 class="font-semibold text-base mb-3">
+                    Fraud Monitoring
+                </h3>
+
+                <p class="text-gray-500 text-xs leading-6">
+                    we have sophisticated fraud detection systems in place to monitor your accounts for any suspicious activities. our dedicated team works around the clock to detect and prevent unauthorized transactions, providing you with peace of mind.
+                </p>
+
+            </div>
+
+
+            <!-- Card 4 -->
+            <div class="bg-[#181818] border border-gray-800 rounded-xl p-7 hover:border-[#b6ff00] transition">
+
+                <div class="w-10 h-10 rounded-lg bg-[#b6ff00]/10 flex items-center justify-center mb-5">
+                    <span class="text-[#b6ff00] text-lg">◉</span>
+                </div>
+
+                <h3 class="font-semibold text-base mb-3">
+                    Secure Mobile Banking
+                </h3>
+
+                <p class="text-gray-500 text-xs leading-6">
+                   our mobile banking app is designed with the same level of security as our online banking platform. you can confidently access your accounts, make transactions, and manage your finances on the go, knowing that your sensitive information is protected.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FAQ SECTION ================= -->
+    <section class="max-w-6xl mx-auto px-6 py-12">
+
+        <!-- Heading -->
+        <div class="mb-8">
+            <h2 class="text-2xl md:text-3xl font-bold">
+                Frequently Asked
+                <span class="text-[#b6ff00]">Questions</span>
+            </h2>
+
+            <p class="text-gray-500 text-xs mt-2">
+                still you have questions? contact our team via support@yourbank.com.
+            </p>
+        </div>
+
+
+        <!-- FAQ Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
+
+            <!-- FAQ 1 -->
+            <div class="border-b border-gray-800 pb-6">
+
+                <h3 class="text-sm font-semibold mb-3">
+                    How do I open an account with your bank?
+                </h3>
+
+                <p class="text-gray-500 text-xs leading-6">
+                    opening an account with your bank is easy. simply visit our website and click on the "Open Account" button. follow the prompts, provide the requored information, and complete the application process. if you need assistance, our customer support team is avaialable to help.
+                </p>
+
+            </div>
+
+
+            <!-- FAQ 2 -->
+            <div class="border-b border-gray-800 pb-6">
+
+                <h3 class="text-sm font-semibold mb-3">
+                    What should I do if I notice a suspicious transaction?
+                </h3>
+
+                <p class="text-gray-500 text-xs leading-6">
+                    Contact our support team immediately if you notice
+                    a transaction that you do not recognize. We will help
+                    you secure your account.
+                </p>
 
         <!-- Money Exchange Section -->
         <div class="space-y-3">
@@ -211,30 +284,262 @@
               </div>
             </div>
 
-            <!-- Exchange Action Button -->
-            <button class="w-full bg-[#293219] border border-[#caff33]/20 text-[#caff33] font-medium py-2.5 rounded-xl text-xs hover:bg-[#323d1e] transition">
-              Exchange
-            </button>
-          </div>
+
+            <!-- FAQ 3 -->
+            <div class="border-b border-gray-800 pb-6">
+
+                <h3 class="text-sm font-semibold mb-3">
+                    How can I recognize a scam?
+                </h3>
+
+                <p class="text-gray-500 text-xs leading-6">
+                    Be careful with unexpected messages requesting your
+                    password, PIN or banking information. We will never
+                    ask you to share sensitive login information through
+                    suspicious messages.
+                </p>
+
+            </div>
+
+
+            <!-- FAQ 4 -->
+             <div class="border-b border-gray-800 pb-6">
+
+                <h3 class="text-sm font-semibold mb-3">
+                    Are my transactions and personal information secure?
+                </h3>
+
+                <p class="text-gray-500 text-xs leading-6">
+                    Yes. We use encryption, monitoring and multiple
+                    security measures to help protect your personal
+                    information and transactions.
+                </p>
+
+            </div>
+
         </div>
 
-      </div>
-    </div>
 
-  </main>
+        <!-- Load More -->
+        <div class="text-center mt-8">
 
-  <!-- Bottom Bar: Supported Currency Badge -->
-  <footer class="max-w-7xl w-full mx-auto px-6 pb-6 flex justify-end z-20">
-    <div class="inline-flex items-center gap-3 bg-[#222222] border border-zinc-800/80 px-4 py-2 rounded-full text-xs text-zinc-300">
-      <span class="text-zinc-400">Supported Currency</span>
-      <div class="flex items-center gap-1.5">
-        <span class="w-6 h-6 rounded-full bg-[#1a1a1a] text-[#caff33] border border-zinc-800 flex items-center justify-center font-semibold text-xs">$</span>
-        <span class="w-6 h-6 rounded-full bg-[#1a1a1a] text-[#caff33] border border-zinc-800 flex items-center justify-center font-semibold text-xs">€</span>
-        <span class="w-6 h-6 rounded-full bg-[#1a1a1a] text-[#caff33] border border-zinc-800 flex items-center justify-center font-semibold text-xs">₿</span>
-        <span class="w-6 h-6 rounded-full bg-[#1a1a1a] text-[#caff33] border border-zinc-800 flex items-center justify-center font-semibold text-xs">Ξ</span>
-      </div>
-    </div>
-  </footer>
+            <button class="text-xs text-gray-400 hover:text-[#b6ff00] transition">
+                LOAD MORE
+                <span class="ml-1">↓</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="max-w-[1600px] mx-auto px-8 md:px-16 pt-14 pb-12">
+
+        <!-- Logo -->
+        <div class="flex justify-center">
+            <a href="#" class="flex items-center gap-2">
+
+                <!-- Logo Icon -->
+                <div class="w-9 h-9 relative flex items-center justify-center">
+
+                    <div class="absolute left-0 top-0 w-4 h-4 bg-[#b6ff00]"></div>
+                    <div class="absolute right-0 top-0 w-4 h-4 bg-[#b6ff00]"></div>
+                    <div class="absolute left-0 bottom-0 w-4 h-4 bg-[#b6ff00]"></div>
+                    <div class="absolute right-0 bottom-0 w-4 h-4 bg-[#b6ff00]"></div>
+
+                    <div class="absolute w-4 h-4 bg-[#191919] rotate-45"></div>
+
+                </div>
+
+                <span class="text-2xl font-medium tracking-tight">
+                    YourBanK
+                </span>
+
+            </a>
+        </div>
+
+
+        <!-- Navigation -->
+        <nav class="flex justify-center gap-7 mt-14 text-[18px] text-gray-200">
+
+            <a href="#" class="hover:text-[#b6ff00] transition">
+                Home
+            </a>
+
+            <a href="#" class="hover:text-[#b6ff00] transition">
+                Careers
+            </a>
+
+            <a href="#" class="hover:text-[#b6ff00] transition">
+                About
+            </a>
+
+            <a href="#" class="hover:text-[#b6ff00] transition">
+                Security
+            </a>
+
+        </nav>
+
+
+        <!-- Horizontal Line -->
+        <div class="border-t border-[#292929] mt-12"></div>
+
+
+        <!-- Contact Information -->
+        <div class="flex flex-wrap justify-center items-center gap-7 md:gap-8 py-7 text-gray-300">
+
+            <!-- Email -->
+            <a
+                href="mailto:hello@skillbridge.com"
+                class="flex items-center gap-2 hover:text-white transition"
+            >
+                <i class="fa-solid fa-envelope text-[#b6ff00] text-xl"></i>
+
+                <span>
+                    hello@skillbridge.com
+                </span>
+            </a>
+
+
+            <!-- Phone -->
+            <a
+                href="tel:+9191813232309"
+                class="flex items-center gap-2 hover:text-white transition"
+            >
+                <i class="fa-solid fa-phone text-[#b6ff00] text-xl"></i>
+
+                <span>
+                    +91 91813 23 2309
+                </span>
+            </a>
+
+
+            <!-- Location -->
+            <div class="flex items-center gap-2">
+
+                <i class="fa-solid fa-location-dot text-[#b6ff00] text-xl"></i>
+
+                <span>
+                    Somewhere in the World
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Horizontal Line -->
+        <div class="border-t border-[#292929]"></div>
+
+
+        <!-- Bottom Footer -->
+        <div
+            class="
+                mt-12
+                border border-[#292929]
+                rounded-[45px]
+                px-4 md:px-6
+                py-4
+                flex
+                flex-col
+                lg:flex-row
+                items-center
+                justify-between
+                gap-6
+            "
+        >
+
+            <!-- Social Media -->
+            <div class="flex items-center gap-3">
+
+                <!-- Facebook -->
+                <a
+                    href="#"
+                    class="
+                        w-[52px] h-[52px]
+                        rounded-full
+                        bg-[#b6ff00]
+                        text-[#191919]
+                        flex items-center justify-center
+                        text-2xl
+                        hover:scale-105
+                        transition
+                    "
+                >
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+
+                <!-- Twitter -->
+                <a
+                    href="#"
+                    class="
+                        w-[52px] h-[52px]
+                        rounded-full
+                        bg-[#b6ff00]
+                        text-[#191919]
+                        flex items-center justify-center
+                        text-2xl
+                        hover:scale-105
+                        transition
+                    "
+                >
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+
+
+                <!-- LinkedIn -->
+                <a
+                    href="#"
+                    class="
+                        w-[52px] h-[52px]
+                        rounded-full
+                        bg-[#b6ff00]
+                        text-[#191919]
+                        flex items-center justify-center
+                        text-xl
+                        hover:scale-105
+                        transition
+                    "
+                >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+            </div>
+
+
+            <!-- Copyright -->
+            <p class="text-gray-400 text-[17px]">
+                YourBank All Rights Reserved
+            </p>
+
+
+            <!-- Policies -->
+            <div class="flex items-center gap-3 text-gray-400 text-[17px]">
+
+                <a
+                    href="#"
+                    class="hover:text-white transition"
+                >
+                    Privacy Policy
+                </a>
+
+                <span class="h-7 w-px bg-gray-500"></span>
+
+                <a
+                    href="#"
+                    class="hover:text-white transition"
+                >
+                    Terms of Service
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
 
   <!-- =========================================
        OUR PRODUCTS SECTION
